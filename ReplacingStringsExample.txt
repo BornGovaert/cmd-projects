@@ -1,0 +1,17 @@
+setlocal ENABLEDELAYEDEXPANSION
+set word=table
+set str="jump over the chair"
+set str=%str:chair=!word!%
+
+set "str1=Hello World!"
+set "str2=%20"
+for /f "delims=" %a in ('cmd /v:on /c @echo "%str1: =!str2!%"') do set "str3=%~a"
+echo %str3%
+
+setlocal enabledelayedexpansion
+set /P MY_TEXT=ENTER TEXT:
+SET SPACE  2PROCENT=
+set NEW_TEXT=%MY_TEXT: =e%
+MSG * %NEW_TEXT%
+
+https://blogs.msdn.microsoft.com/oldnewthing/20060823-00/?p=29993/
